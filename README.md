@@ -9,7 +9,7 @@ Surgical patients are automatically at risk of suffering postoperative complicat
 * To build machine learning model for predicting postsurgical complication
 * To determine which factors have the greatest impact on postsurgical complications
 ### Data understanding
-* Data Source : https://www.kaggle.com
+* Data Source : Kaggle
 * There are 25 variables and 14635 total datapoints.
 * Target variable is complication 
      * Yes : Patient has postsurgical complication
