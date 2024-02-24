@@ -3,7 +3,6 @@
 **Develop a machine learning model that utilizes patient demographic data and medical history to accurately predict the risk of postoperative complications.**
 ## What are postoperative complications? 
 Complication is a term used by health professionals to refer to something which was not intended to happen. Postoperative complications are problems that can happen after you have had surgery but which were not intended. Doctors are aware of the risk of complications and take steps before, during and after surgery to reduce this risk. However, some complications are common and occur frequently despite precautions. Some postoperative complications are related to the exact surgery that you have had, but many (such as wound infection) may occur after any kind of surgery.
-The most common postoperative complications include fever, small lung blockages, infection, pulmonary embolism (PE) and deep vein thrombosis (DVT).
 ## Motivation:
 Surgical patients are automatically at risk of suffering postoperative complications, despite decades of scientific and technological advancement. The accurate prediction of individual outcomes has the potential to completely reshape the future of postoperative management. Through such prediction, individual preoperative treatment and postoperative management can be tailored, allowing for more effective clinical decision-making.
 ### Objective
@@ -46,15 +45,7 @@ EDA is an important step in visualizing datasets to find patterns, anomalies, an
 * Duplicate Values: Duplicate records were removed to ensure accuracy.
 * Univariate Analysis: Analysis of individual variables such as age, gender, moon phase, day of the week, etc.
 ### Feature selection:
-The 8 important features are as follows:
-1. Age
-2. Rate of postsurgical complication based on clinical classification software
-3. Rist of postsurgical complication calculated using Complication stratification index
-4. Risk of mortality after surgery
-5. BMI
-6. The 30-day mortality rate
-7. The Agency for Healthcare Research and Quality (AHRQ) is a tool used to group diagnoses and procedures into clinically meaningful categories for research and analysis.
-8. The Charlson Comorbidity Index
+Initially, models are constructed encompassing all 24 features. Then, employing a random forest classifier, 8 features are selected, elucidating approximately 95% of the significance to the target variable. Finally, the ultimate model is developed solely utilizing these 8 features.
 ### Model Building:
 The entire data is split into two parts train data and test data
 Oversampling is performed for the minority class (patients with complications) to address class imbalance.
@@ -70,4 +61,4 @@ Accuracy, recall, precision, and F1-score were calculated to evaluate the models
 ## Conclusion:
 1.	Decision tree model performs better compared to random forest and logistic regression. Since F1 score for decision tree is 71.3%
 2.	According to exploratory data analysis, people age between 57 to 73 have highest risk of postsurgical complications.
-3.	The main factor affecting postsurgical complication is age, followed by complication rate, complication risk index and so forth.
+3.	The main factor affecting postsurgical complication is age, followed by complication risk index, complication rate and so forth.
